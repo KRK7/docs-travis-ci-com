@@ -5,7 +5,8 @@ permalink: /user/billing-overview/
 
 ---
 
-> Travis CI introduces a new Pricing system, and therefore starting Dec. 13th, 2021, Concurrency-based plans are no longer available.
+> Effective March 2nd, 2022, concurrency pricing is returning to the Travis CI website for 1, 2, and 5 concurrency plans.
+
 
 ## Travis CI Plan types
 
@@ -16,8 +17,8 @@ The variety of plans provides you with the flexibility to choose the plan that s
 
 | Billing Period | Concurrency based | Usage-based |
 |:-------        |:-----------------:|:-----------:|
-|Month           | Concurrent jobs limit<br />Unlimited build minutes on Linux, Windows, and FreeBSD<br />Paid macOS builds (credits)<br /><br />*To be discontinued soon | Very high concurrency limit<br />Paid macOS, Linux, Windows, and FreeBSD build minutes (credits)<br />Paid user licenses (only per users triggering the builds)<br /><br />[Purchase](/user/account/plan) in Travis CI |
-|Annual      | Only grandfathered | Very high concurrency limit<br />Paid macOS, Linux, Windows, and FreeBSD build minutes (credits)<br />Paid user licenses (only per users triggering the builds)<br /><br />Purchase in Travis CI or contact support [for plans over $3,300](/user/account/plan) in Travis CI |
+|Month           | Concurrent jobs limit<br />Unlimited build minutes on Linux, Windows, and FreeBSD<br />Paid macOS builds (credits)<br /><br /> | Very high concurrency limit<br />Paid macOS, Linux, Windows, and FreeBSD build minutes (credits)<br />Paid user licenses (only per users triggering the builds)<br /><br /> |
+|Annual      | Only grandfathered | Very high concurrency limit<br />Paid macOS, Linux, Windows, and FreeBSD build minutes (credits)<br />Paid user licenses (only per users triggering the builds)<br /><br />Purchase in Travis CI or contact support [for plans over $3,300](https://app.travis-ci.com/account/plan) in Travis CI |
 
 
 For most of users, a single concurrency-based plan should be sufficient. However, if you build a lot of minutes per month and concurrency becomes a bottleneck, please contact Travis CI asking for a Usage-based plan.
@@ -33,8 +34,6 @@ Due to security reasons and an anti-abuse preventive measure, any new user will 
 
 ## Concurrency based plans
 
-> **Starting Dec. 13th, 2021, Concurrency-based plans are no longer available. Instead, purchase a new plan in [Travis CI](travis-ci.com/account/plan).** 
-
 Concurrency-based plans are much like what Travis CI has been offering already for a long time: an ability to run a build consisting of X concurrent jobs. 
 In Travis CI, builds are executed singularly, without exceeding limitations. Therefore, if executing multiple builds simultaneously or executing a build with multiple build jobs, once the concurrency limit is reached, the reminder builds/jobs must wait until a queue capacity is available for processing. 
 
@@ -47,7 +46,7 @@ Credits are used to pay for each build job minute on macOS. Purchase only the cr
 
 > If a user/organization on the 2 concurrent jobs Plan executes build with jobs for `os: linux` and `os: freebsd` it will execute as soon as the concurrency capacity is available for particular build jobs.
 >
-> If a user/organization on the same Plan tries to execute a job for `os: macOS` and has no credits available (see your [Plans](https://travis-ci.com/account/plan)), this build will not execute. In order to proceed, an add-on must be purchased, e.g. 25k credits. Now the build can be executed, and a pre-defined amount of [credits will be charged for each build minute](/user/billing-overview/#usage---credits). 
+> If a user/organization on the same Plan tries to execute a job for `os: macOS` and has no credits available (see your [Plans](https://app.travis-ci.com/account/plan)), this build will not execute. In order to proceed, an add-on must be purchased, e.g. 25k credits. Now the build can be executed, and a pre-defined amount of [credits will be charged for each build minute of macOS build job](/user/billing-overview/#usage---credits).
 
 
 ### Concurrency based Plan - Summary
@@ -62,9 +61,9 @@ Credits are used to pay for each build job minute on macOS. Purchase only the cr
 ### Concurrency Plan - How to obtain?
 
 1. Sign in to Travis CI with the [Version Control System of your choice](/user/tutorial/).
-2. Navigate to the [Plans](https://travis-ci.com/account/plan) and select 'X concurrent jobs Plan'. 
+2. Navigate to the [Plan tab](https://app.travis-ci.com/account/plan) and select 'X concurrent jobs Plan'.
 3. Enter your billing details. **Please note that all prices are provided netto, w/o any VAT or other applicable local taxes**. If you are EU based VAT paying company, do not forget to enter your VAT number.
-4. Confirm transaction.
+4. Confirm the transaction.
 
 
 ## Usage-based plans
@@ -77,15 +76,6 @@ The final cost is flexible and closely related to the actual usage of the system
 
 > The Usage-based pricing model bills based on minutes used (via credits) and the number of users executing those builds (via user licenses). Users subscribe to a plan that allocates of credits to be used towards build minutes and pricing for a specific number of user licenses. The credits are deducted from the user's credit balance as they are used in the Travis CI service.
 Unique users triggering builds within a billing period will constitute a number of actual user licenses used and will be charged at the end of the billing period, according to the rates of their selected plan. 
-
-> **If you are running a large number of builds or users each month, please [contact Travis CI support](mailto:support@travis-ci.com) if you’d like to discuss your plan.** 
-
-The Usage-based pricing system charges users and organizations depending on the number of minutes each builds job run on Travis CI infrastructure. 
-The Usage-based pricing is a pre-paid model for credits and subscriptions for per-user-license. In other words, users and organizations can run as many build jobs as they want simultaneously, meaning that all builds are executed as soon as possible without limitations.  
-The final cost is flexible and closely related to the actual usage of the system, allowing you to downscale or upscale as per your needs.
-
-> The Usage-based pricing model bills based on minutes used (via credits) and the number of users executing those builds (via user licenses). Users subscribe to a plan that allocates credits to be used towards build minutes and pricing for a specific number of user licenses. The credits are deducted from the user's credit balance as they are used in the Travis CI service.
-Unique users triggering builds within a billing period will constitute a number of actual user licenses used. They will be charged at the end of the billing period, according to the rates of their selected plan. 
 
 ### Monthly Plans
 
@@ -111,11 +101,11 @@ Subscribe to one of our monthly plans to get your credits and continue building.
 
 The new user is immediately granted the subscription´s credits to continue building at the moment of a plan’s subscription. 
 
-The number of users is counted based on the number of builds triggered; each individual who triggers a build within a month counts as a user. For any monthly plan selected, the first three users cost 25K credits, and each additional user to trigger a build within that month costs an additional 25K credits. Triggering builds are only possible if a user has a positive credit balance. To get more credits, users can enable the [Auto-refill feature](/user/billing-autorefill/) or change to a higher [credits plan](/user/account/plan/). If the user has credits after the plan´s renewal, these carry over to the new subscription. For more information about your plan and validity dates, see the [Plans page](/user/account/plan/).
+The number of users is counted based on the number of builds triggered; each individual who triggers a build within a month counts as a user. For any monthly plan selected, the first three users cost 25K credits, and each additional user to trigger a build within that month costs an additional 25K credits. Triggering builds are only possible if a user has a positive credit balance. To get more credits, users can enable the [Auto-refill feature](/user/billing-autorefill/) or change to a higher [credits plan](https://app.travis-ci.com/account/plan). If the user has credits after the plan´s renewal, these carry over to the new subscription. For more information about your plan and validity dates, see the [Plan page](https://app.travis-ci.com/account/plan).
 
 #### Canceling my Monthly Subscription
 
-Users can choose to cancel their current subscription anytime they like; simply use the Cancel Subscription button located on the [Plan Page](/user/account/plan/). Upon cancellation, Travis CI stops charging the monthly fee, and users have one extra month to use the remaining credits; otherwise, any remaining credits are lost. Users cannot purchase any new credits unless they rejoin a monthly or annual subscription. Users have one year after canceling the subscription to view or save build data; after one year of cancellation, build data is removed from Travis CI.  
+Users can choose to cancel their current subscription anytime they like; simply use the Cancel Subscription button located on the [Plan page](https://app.travis-ci.com/account/plan). Upon cancellation, Travis CI stops charging the monthly fee, and users have one extra month to use the remaining credits; otherwise, any remaining credits are lost. Users cannot purchase any new credits unless they rejoin a monthly or annual subscription. Users have one year after canceling the subscription to view or save build data; after one year of cancellation, build data is removed from Travis CI.
 
 ### Annual Plans
 
@@ -125,7 +115,7 @@ Subscribe to one of our annual plans to get more credits and continue building.
 
 Users who subscribe to an Annual Plan are granted the subscription´s amount of credits over 12 months. From the moment of subscription, users can use the credits however they see best, without monthly allotments or limits.   
 
-Users interested in Annual plans can select an annual plan on the [Plans Page](/user/account/plan/).
+Users interested in Annual plans can select an annual plan on the [Plan page](https://app.travis-ci.com/account/plan).
 
 | Credits |   Price  |
 |:---------  |:--------  | 
@@ -140,7 +130,7 @@ Users interested in Annual plans can select an annual plan on the [Plans Page](/
 
 #### Plan Usage
 
-The number of users is counted based on the number of builds triggered; each individual who triggers a build within a month counts as a user. Each month the unique user count is reset. The first three users cost 25K credits, and each additional user to start a build within that month costs an additional 25K credits. Triggering builds are only possible if a user has a positive credit balance. Users can enable the [Auto-refill option](/user/billing-autorefill/) or change to a higher [credits plan](/user/account/plan/) to get more credits. Otherwise, your Annual plan renews automatically when the 12 month elapses. If the user has credits after the plan renewal, these carry over to the new subscription. For more information about your plan and validity dates, see the [Plans Page](/user/account/plan/).
+The number of users is counted based on the number of builds triggered; each individual who triggers a build within a month counts as a user. Each month the unique user count is reset. The first three users cost 25K credits, and each additional user to start a build within that month costs an additional 25K credits. Triggering builds are only possible if a user has a positive credit balance. Users can enable the [Auto-refill option](/user/billing-autorefill/) or change to a higher [credits plan](https://app.travis-ci.com/account/plan) to get more credits. Otherwise, your Annual plan renews automatically when the 12 month elapses. If the user has credits after the plan renewal, these carry over to the new subscription. For more information about your plan and validity dates, see the [Plan page](https://app.travis-ci.com/account/plan).
 
 ##### What if I ran out of credits before my contract elapses?
 
@@ -150,7 +140,7 @@ Then, increase their annual credit amount by subscribing to a higher credit plan
 
 #### Canceling my Annual Subscription
 
-Users on an Annual Plan must explicitly cancel their yearly subscription; otherwise, the plan renews automatically whenever the current cycle ends. To cancel your existing subscription, simply use the Cancel Subscription button located at Page (link). 
+Users on an Annual Plan must explicitly cancel their yearly subscription; otherwise, the plan renews automatically whenever the current cycle ends. To cancel your existing subscription, simply use the Cancel Subscription button located at the [Plan page](https://app.travis-ci.com/account/plan).
 
 Upon cancellation, users have the remaining time of the contract plus one extra month to use the remaining credits; otherwise, any remaining credits expire. Users cannot purchase any new credits unless they rejoin a monthly or annual subscription. Users have one year after canceling the subscription to view or save build data; after one year of cancellation, build data is removed from Travis CI. 
 
@@ -272,15 +262,15 @@ With every build started, Travis CI keeps track of how many unique users trigger
 
 | Area                            | Details    |
 | :---                            | ---        |
-| **Payment**                     | Credits are paid in advance:<BR />1. Upon purchasing a Plan, an immediate charge is applied depending on credits allotment coming with a Plan.<BR />2. The additional credit addons can be purchased at any time, and credits are only used when you need them. The charge is applied immediately upon transaction.<BR /><BR />The user license cost is charged automatically in arrears at the end of each billing period (Usage Plan w/o subscription). The number of unique users triggering a build is charged according to the license rates.<br /><br />The Free Plan assigned upon sign-up grants you unlimited users for free. |
+| **Payment**                     | Credits are paid in advance:<BR />1. Upon purchasing a Plan, an immediate charge is applied depending on the credits allotment coming with a Plan.<BR />2. The additional credit addons can be purchased at any time, and credits are only used when you need them. The charge is applied immediately upon transaction.<BR /><BR />The user license cost is charged automatically in arrears at the end of each billing period (Usage Plan w/o subscription). The number of unique users triggering a build is charged according to the license rates.<br /><br />The Free Plan assigned upon sign-up grants you unlimited users for free. |
 | **Private/Public repositories** | With Credits, you can build over both private and public repositories. <BR/> With OSS Credits, you can build only over public repositories. |
-| **Build job limits**            | Very high. <BR/><BR/>The Free Plan assigned automatically upon sign-up has a limit of 20 concurrent jobs. The paid usage based plans start from a 40 concurrent jobs limit. |
+| **Build job limits**            | Very high. <BR/><BR/>The Free Plan assigned automatically upon sign-up has a limit of 20 concurrent jobs. The paid usage-based plans start from a 40 concurrent jobs limit. |
 
 
 ### Usage-based Plan - How to obtain?
 
 1. Sign in to Travis CI with a [Version Control System of your choice](/user/tutorial/).
-2. Navigate to the [Plans](https://app.travis-ci.com/account/plan) and have your billing and contact details fill in correctly. 
+2. Navigate to the [Plans](https://app.travis-ci.com/account/plan) and have your billing and contact details filled in correctly. 
 3. Contact [Travis CI support](mailto:support@travis-ci.com) requesting a Usage-based Plan.
 
 
@@ -309,7 +299,40 @@ VM size property impacts the cost of build minutes/credits usage in the followin
 
 
 
-> If you run a Linux build in usage model, it'll cost you 10 credits. If you run a Linux build under a concurrency plan, you do not need credits, as the subscription covers the cost. However, if you decide to run a Linux build using the `large` instance size, you will need in both cases 20 credits per every started build minutes (2 x 10 credits).
+> If you run a Linux build in usage model, it'll cost you 10 credits. If you run a Linux build under a concurrency plan, you do not need credits, as the subscription covers the cost. However, if you decide to run a Linux build using the `large` instance size, you will need, in both cases, 20 credits per every started build minutes (2 x 10 credits).
+
+
+## GPU VM Instance Sizes and Credit Cost for GPU builds
+
+Travis CI allows users to trigger GPU builds both in usage-based and concurrency-based plans.
+
+GPU builds allow you to choose the instance size the build will run on (for the 'full vm' build job). X-large instance sizes deliver more resources (vCPU and RAM) for your build jobs. This can be done by setting a 'vm' property in the .travis.yml config. This property allows you to choose the Virtual machine instance for a build:
+
+```yaml
+vm:
+ size: [gpu-medium | gpu-xlarge] #new values in the schema for existing key 
+```
+
+Instance sizes do not apply to Windows, and OSX build jobs.  Visit our [CI Environment Overview page](/user/reference/overview#gpu-vm-instance-size) for information on the available GPU VM sizes, operating system, and CPU architecture.  
+
+To use instance sizes:
+
+* you need to have credits under your account, regardless of the plan (Concurrency or Usage-based) you use. 
+* you need to add the tags mentioned above to your `.travis.yml.`
+* you need to select a Linux operating system in your `travis.yml.`
+
+GPU VM size property impacts the cost of build minutes/credits usage in the following way:
+
+| GPU VM size              | Credits per<br />started build minute |
+|:--------------------:|:-------------------------------------:|
+| T4 medium       | 230 |
+| V100 x-large      | 890 |
+
+
+> GPU Support is only available for: 
+> * arch: amd64 
+> * os: Linux
+> * dist: [focal] # jammy still under fixing, to be added later, xenial EOL, bionic will go EOL in April 2023.
 
 
 ## Getting Help

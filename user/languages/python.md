@@ -75,7 +75,7 @@ version. This means that as soon as you specify `language: python` in `.travis.y
 System Python is not used and should not be relied on. If you need
 to install Python packages, do it via pip and not apt.
 
-If you decide to use apt anyway, note that for compatibility reasons, you'll only be able to use the default Python versions that are available in Ubuntu (e.g. for Xenial, this means 2.7.12 and 3.5.1).
+If you decide to use apt anyway, note that for compatibility reasons, you'll only be able to use the default Python versions that are available in Ubuntu (e.g. for Xenial, this means 2.7.12 and 3.5.2).
 To access the packages inside the virtualenv, you will need to specify that it should be created with the `--system-site-packages` option.
 To do this, include the following in your `.travis.yml`:
 
@@ -104,7 +104,7 @@ python:
   - "3.8"
   # PyPy versions
   - "pypy"   # currently Python 2.7.13, PyPy 7.1.1
-  - "pypy3"  # currently Python 3.6.1,  PyPy 7.1.1-beta0
+  - "pypy3"  # currently Python 3.6.9,  PyPy 7.3.1
 # command to install dependencies
 install:
   - pip install -r requirements.txt
@@ -124,7 +124,7 @@ a recent development version of [CPython](https://github.com/python/cpython) bui
 From Python 3.5 and later, Python In Development versions are available.
 
 You can specify these in your builds with `3.5-dev`, `3.6-dev`,
-`3.7-dev`, `3.8-dev` or `3.9-dev`.
+`3.7-dev`, `3.8-dev`, `3.9-dev`, `3.10-dev` or `3.11-dev`
 
 ## Default Build Script
 
@@ -156,7 +156,7 @@ Due to the way Travis is designed, interaction with [tox](https://tox.readthedoc
 As described [above](/user/languages/python/#travis-ci-uses-isolated-virtualenvs), Travis already runs tests inside an isolated virtualenv whenever `language: python` is specified, so please bear that in mind whenever creating more environments with tox. If you would prefer to run tox outside the Travis-created virtualenv, it might be a better idea to use `language: generic` instead of `language: python`.
 
 If you're using tox to test your code against multiple versions of Python, you have two options:
-  * use `language: generic` and manually install the Python versions you're interested in before running tox (without the manual installation, tox will only have access to the default Ubuntu Python versions - 2.7.12 and 3.5.1 for Xenial)
+  * use `language: generic` and manually install the Python versions you're interested in before running tox (without the manual installation, tox will only have access to the default Ubuntu Python versions - 2.7.12 and 3.5.2 for Xenial)
   * use `language: python` and a build matrix that uses a different version of Python for each branch (you can specify the Python version by using the `python` key). This will ensure the versions you're interested in are installed and parallelizes your workload.
 
 ## Running Python tests on multiple Operating Systems
